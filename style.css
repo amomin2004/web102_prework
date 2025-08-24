@@ -19,21 +19,52 @@ body {
     margin-top: -10px;
 }
 
+
 .stats-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    align-items: stretch;
+    width: min(1100px, 92%);
+    margin: 0 auto 14px;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
-    width: 100%;
+    width: auto;
+    border-radius: 12px;
+    padding: 16px;
     text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, .7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
 }
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+    font-weight: 700;
+    color: #083344;
+}
+
+
+#top-games {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+
+@media (max-width: 640px) {
+    .stats-container { grid-template-columns: 1fr; }
+    #top-games       { grid-template-columns: 1fr; }
 }
 
 #games-container {
@@ -55,11 +86,13 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    transition: transform .15s ease, box-shadow .2s ease;
 }
 
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform: translateY(-4px);
 }
 
 #button-container {
@@ -69,7 +102,50 @@ body {
 button {
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem;
     border-radius: 7px;
+    background: #5fa9c9;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease, transform .15s ease;
+}
+
+button:hover {
+    background: #4a90a8;
+    transform: translateY(-2px);
+}
+
+html { scroll-behavior: smooth; }
+
+.top-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: #5fa9c9;
+    margin: -10px -10px 10px -10px;
+}
+.top-nav a {
+    color: #083344;
+    text-decoration: none;
+    font-weight: 600;
+}
+.top-nav a:hover { text-decoration: underline; }
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0.75rem 0;
+}
+#search-input {
+    width: min(720px, 92%);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #a8b0bc;
+    outline: none;
+}
+#search-input:focus {
+    box-shadow: 0 0 0 3px rgba(173, 216, 230, 0.6);
 }
