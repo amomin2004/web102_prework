@@ -23,14 +23,11 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Screen Recording 2025-08-24 at 3 46 35 PM](https://github.com/user-attachments/assets/9aaf2683-5212-4f56-a483-b05d4e9d5735)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with : https://www.freeconvert.com/convert/video-to-gif
 
 ## Notes
 
